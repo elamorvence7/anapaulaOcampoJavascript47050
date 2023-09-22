@@ -24,11 +24,32 @@ const garabatoHembra = {
   subtotal: 4000,
   cantidad: 10,
 };
+const garabatoMacho = {
+  nombre: "Garabato macho",
+  precio: 4200,
+  subtotal: 4200,
+  cantidad: 10,
+};
+const tala = {
+  nombre: "Tala",
+  precio: 2800,
+  subtotal: 2800,
+  cantidad: 25,
+};
+const quebrachoBlanco = {
+  nombre: "Quebracho Blanco",
+  precio: 4500,
+  subtotal: 4500,
+  cantidad: 20,
+};
 
 carrito.push(algarrobo);
 carrito.push(algarroboNegro);
 carrito.push(espinillo);
 carrito.push(garabatoHembra);
+carrito.push(garabatoMacho);
+carrito.push(tala);
+carrito.push(quebrachoblanco);
 
 function enCarrito(nombrePrompt) {
   return carrito.find((producto) => producto.nombre == nombrePrompt);
@@ -64,7 +85,7 @@ function agregar() {
 function listar() {
   console.clear();
   console.log("Productos que hay en el carrito:");
-
+}
   carrito.forEach((elemento) => {
     console.log("----------");
     console.log("Nombre:", elemento.nombre);
